@@ -24,18 +24,25 @@ public class AlunoService {
 		return null;
 	}
 	//Update
-	//Delete
 	
+	public void configAlunoNome(Aluno obj, String nome){
+		obj.setNome(nome);
+	}
+	public void configAlunoTel(Aluno obj, long tel){
+		obj.setTelefone(tel);
+	}
+	public void configAlunoMat(Aluno obj, String matricula) {
+		obj.setMatricula(matricula);
+	}
+	public void configAlunoEnd(Aluno obj, String endereco) {
+		obj.setEndereco(endereco);
+	}
+
+	//Delete
+	public void deletarAluno(String nome){
+		listaAlunos.remove(buscarAluno(nome));
+	}
 	//Métodos
 
-	//Retorna Falso para Pendente e Verdadeiro para Matriculado
-	public boolean getSituacao(String matricula) {
-		if (buscarAluno(matricula).listadeDisciplinas.isEmpty() ){
-			return false;
-		}
-		else {
-			return true;
-		}
-	}
-	
+		
 }

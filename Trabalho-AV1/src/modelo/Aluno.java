@@ -63,8 +63,14 @@ public class Aluno {
 	public String getSituacao() {
 		return situacao;
 	}
-	public void setSituacao(String situacao) {
-		this.situacao = situacao;
+	//Muda a situação do aluno dependendo da situação da lista listadeDisciplinas
+	public void setSituacao(String matricula) {
+		if (listadeDisciplinas.isEmpty() ){
+			this.situacao = "Pendente";
+		}
+		else {
+			this.situacao = "Matriculado";
+		}
 	}
 	public String getCurso() {
 		return curso;
@@ -73,6 +79,9 @@ public class Aluno {
 		this.curso = curso;
 	}
 	
-	
-	
+	//Métodos
+	public List<Disciplina> getDisciplinas(){
+		return this.listadeDisciplinas;
+	}
+
 }
