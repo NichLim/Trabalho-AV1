@@ -22,47 +22,71 @@ public class Professor {
 	private String nome;
 	private String cpf;
 	private String endereco;
-	private Telefone telefone;
+	private long telefone;
 	private String categoria;
 	private String disciplina;
 	
-	//Getters and Setters auto generated.(GoodJob)	
+	//Construtor
+	public Professor(String nome, String cpf, String endereco, long telefone, String categoria, String disciplina) {
+		this.nome = nome;
+		this.telefone = telefone;
+		this.cpf = cpf;
+		this.endereco = endereco;
+		this.categoria = categoria;
+		this.disciplina = disciplina;
+	}
+
+	//Getters and Setters auto generated.(GoodJob)
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
 	public String getCpf() {
 		return cpf;
 	}
+
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
+
 	public String getEndereco() {
 		return endereco;
 	}
+
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public Telefone getTelefone() {
+
+	public long getTelefone() {
 		return telefone;
 	}
-	public void setTelefone(Telefone telefone) {
+
+	public void setTelefone(long telefone) {
 		this.telefone = telefone;
 	}
+
 	public String getCategoria() {
 		return categoria;
 	}
+
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
+
 	public String getDisciplina() {
 		return disciplina;
 	}
+
 	public void setDisciplina(String disciplina) {
 		this.disciplina = disciplina;
 	}
+	
+	
+
 	
 	
 	
