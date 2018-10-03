@@ -35,6 +35,10 @@ public class Professor {
 		this.categoria = categoria;
 		this.disciplina = disciplina;
 	}
+	public Professor(String nome, String disciplina) {
+		this.nome = nome;
+		this.disciplina = disciplina;
+	}
 
 	//Getters and Setters auto generated.(GoodJob)
 	public String getNome() {
