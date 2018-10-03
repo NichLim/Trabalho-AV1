@@ -5,7 +5,7 @@ public class Programa {
 	public static void main(String[]args) {
 		
 	
-		//Lista todos os alunos
+		//Lista todos os alunos A
 		
 		/*public void listaDisciplinas() {
 		for (Aluno aux : aluno.getDisciplinas()) {
