@@ -13,13 +13,13 @@ public class Aluno {
 	private String endereco;
 	private long telefone;
 	private String situacao;
-	private String curso;
+	private Curso curso;
 	
 	//Lista de Disciplinas
 	public List<Disciplina> listadeDisciplinas = new ArrayList();
-	
+		
 	//Construtor
-	public Aluno(String nome, String cpf, String matricula, String endereco, long telefone, String situacao, String curso) {
+	public Aluno(String nome, String cpf, String matricula, String endereco, long telefone, String situacao, Curso curso) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.matricula = matricula;
@@ -63,19 +63,15 @@ public class Aluno {
 	public String getSituacao() {
 		return situacao;
 	}
-	//Muda a situação do aluno dependendo da situação da lista listadeDisciplinas
-	public void setSituacao(String matricula) {
-		if (listadeDisciplinas.isEmpty() ){
-			this.situacao = "Pendente";
-		}
-		else {
-			this.situacao = "Matriculado";
-		}
+	
+	public void setSituacao(String situacao) {
+		this.situacao = situacao;
 	}
-	public String getCurso() {
+
+	public Curso getCurso() {
 		return curso;
 	}
-	public void setCurso(String curso) {
+	public void setCurso(Curso curso) {
 		this.curso = curso;
 	}
 	
