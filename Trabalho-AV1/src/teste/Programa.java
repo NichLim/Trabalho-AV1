@@ -14,7 +14,8 @@ public class Programa {
 		CursoService cursosvc = new CursoService();
 		AlunoService alunosvc = new AlunoService();
 		ProfessorService profsvc = new ProfessorService();
-	
+
+		alunosvc.povoaAluno();
 		profsvc.povoaProfessor();
 		cursosvc.povoaCurso();
 		alunosvc.povoaAluno();		
