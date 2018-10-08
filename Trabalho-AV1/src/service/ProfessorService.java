@@ -16,6 +16,7 @@ public class ProfessorService {
 		return this.listaProfessores;
 	}
 	
+	
 	//Receita professor - Fixed ;). (Ty brow :D)
 	public void addProfessor(String nome, long telefone, String cpf, String endereco, String categoria, Disciplina disciplina) {
 		Professor p = new Professor(nome, endereco, cpf, telefone, categoria, disciplina);

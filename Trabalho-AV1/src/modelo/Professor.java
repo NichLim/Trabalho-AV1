@@ -80,6 +80,7 @@ public class Professor {
 		this.telefone = telefone;
 	}
 
+	
 	public String getCategoria() {
 		return categoria;
 	}

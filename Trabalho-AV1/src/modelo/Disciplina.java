@@ -12,6 +12,7 @@ public class Disciplina {
 	private int custoTotal;
 	private int sala;
 	
+	
 	//Disciplinas
 	public List<Aluno> listaChamada = new ArrayList();
 	
