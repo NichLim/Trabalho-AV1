@@ -4,6 +4,7 @@ import java.util.List;
 
 import modelo.Aluno;
 import modelo.Categoria;
+import modelo.Disciplina;
 import modelo.Professor;
 
 public class ProfessorService {
@@ -16,12 +17,12 @@ public class ProfessorService {
 	}
 	
 	//Receita professor - Fixed ;). (Ty brow :D)
-	public void addProfessor(String nome, long telefone, String cpf, String endereco, Categoria categoria, String disciplina) {
+	public void addProfessor(String nome, long telefone, String cpf, String endereco, String categoria, Disciplina disciplina) {
 		Professor p = new Professor(nome, endereco, cpf, telefone, categoria, disciplina);
 		listaProfessores.add(p);
 	}
 	
-	public void addProfessor(String nome, String disciplina) {
+	public void addProfessor(String nome, Disciplina disciplina) {
 		Professor p = new Professor(nome, disciplina);
 		listaProfessores.add(p);
 	}
@@ -45,17 +46,17 @@ public class ProfessorService {
 	}
 		//Update
 		
-		public void upProfessorNome(Professor p, String nome){
-			p.setNome(nome);
+		public void upProfessorNome(String nome, String novonome){
+			buscaProfessor(nome).setNome(novonome);
 		}
-		public void upProfessorTel(Professor p, long tel){
-			p.setTelefone(tel);
+		public void upProfessorTel(String nome, long tel){
+			buscaProfessor(nome).setTelefone(tel);
 		}
-		public void upProfessorCat(Professor p, Categoria categoria, String cat) {
-			p.setCategoria(categoria, cat);
+		public void upProfessorDisciplina(String nome, Disciplina disciplina) {
+			buscaProfessor(nome).setDisciplina(disciplina);
 		}
-		public void upProfessorEnd(Professor p, String endereco) {
-			p.setEndereco(endereco);
+		public void upProfessorEnd(String nome, String endereco) {
+			buscaProfessor(nome).setEndereco(endereco);
 		}
 
 		//Delete

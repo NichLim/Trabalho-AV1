@@ -27,14 +27,14 @@ public class Professor {
 	private String cpf;
 	private String endereco;
 	private long telefone;
-	private Categoria categoria;
-	private String disciplina;
+	private String categoria;
+	private Disciplina disciplina;
 
 	//Disciplinas
 	public List<Disciplina> listaProfessorDisciplinas = new ArrayList();
 	
 	//Construtores
-	public Professor(String nome, String cpf, String endereco, long telefone, Categoria categoria, String disciplina) {
+	public Professor(String nome, String cpf, String endereco, long telefone, String categoria, Disciplina disciplina) {
 		this.nome = nome;
 		this.telefone = telefone;
 		this.cpf = cpf;
@@ -42,7 +42,7 @@ public class Professor {
 		this.categoria = categoria;
 		this.disciplina = disciplina;
 	}
-	public Professor(String nome, String disciplina) {
+	public Professor(String nome, Disciplina disciplina) {
 		this.nome = nome;
 		this.disciplina = disciplina;
 	}
@@ -80,19 +80,20 @@ public class Professor {
 		this.telefone = telefone;
 	}
 
-	public Categoria getCategoria() {
+	public String getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(Categoria categoria, String cat) {
-		categoria.addGato(cat);
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+		
 	}
 
-	public String getDisciplina() {
+	public Disciplina getDisciplina() {
 		return disciplina;
 	}
 
-	public void setDisciplina(String disciplina) {
+	public void setDisciplina(Disciplina disciplina) {
 		this.disciplina = disciplina;
 	}
 	
