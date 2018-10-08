@@ -43,10 +43,7 @@ public class CursoService {
 	//Métodos
 	public void povoaCurso() {
 	ProfessorService profsvc = new ProfessorService();
-	addCurso("Matemática", "320", "Noite", profsvc.buscaProfessor("Edson"));
-	addCurso("Administração", "301", "Noite", profsvc.buscaProfessor("Francisco"));
-	addCurso("Ciencia de Computação", "1111", "Manhã", profsvc.buscaProfessor("Diego"));
-	addCurso("Contabilidade", "720", "Tarde", profsvc.buscaProfessor("Edson"));
+	
 	}
 	public void gradeCursos() {
 		
