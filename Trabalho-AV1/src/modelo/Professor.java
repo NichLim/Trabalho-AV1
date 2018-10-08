@@ -1,5 +1,9 @@
 package modelo;
 
+import java.util.ArrayList;
+import java.util.List;
+import modelo.Categoria;
+
 public class Professor {
 	//My legs are dangling of the egde, stomach full of pills didn`t work again, I pull a bullet in my head and I`m gone (GoodJob)
 	//Look into the mirror and say goodbye. Climb to the roof to see if u can fly <3 (GoodJob)
@@ -23,11 +27,14 @@ public class Professor {
 	private String cpf;
 	private String endereco;
 	private long telefone;
-	private String categoria;
+	private Categoria categoria;
 	private String disciplina;
+
+	//Disciplinas
+	public List<Disciplina> listaProfessorDisciplinas = new ArrayList();
 	
-	//Construtor
-	public Professor(String nome, String cpf, String endereco, long telefone, String categoria, String disciplina) {
+	//Construtores
+	public Professor(String nome, String cpf, String endereco, long telefone, Categoria categoria, String disciplina) {
 		this.nome = nome;
 		this.telefone = telefone;
 		this.cpf = cpf;
@@ -73,12 +80,12 @@ public class Professor {
 		this.telefone = telefone;
 	}
 
-	public String getCategoria() {
+	public Categoria getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
+	public void setCategoria(Categoria categoria, String cat) {
+		categoria.addGato(cat);
 	}
 
 	public String getDisciplina() {
