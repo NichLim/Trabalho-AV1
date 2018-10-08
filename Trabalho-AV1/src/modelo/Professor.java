@@ -90,8 +90,16 @@ public class Professor {
 	}
 	
 	
-
-	
+	//Método de Listagem de Professor
+	public void mostraDados() {
+		System.out.println("Nome: " + this.nome);
+		System.out.println("Telefone: " + this.telefone);
+		System.out.println("CPF: " + this.cpf);
+		System.out.println("Endereco: " + this.endereco);
+		System.out.println("Categoria: " + this.categoria);
+		System.out.println("Disciplina: " + this.disciplina);
+		System.out.println("\n");
+	}
 	
 	
 }

@@ -25,7 +25,7 @@ public class ProfessorService {
 	}
 	
 	//Read
-		public Professor buscarProfessor(String nome) {
+		public Professor buscaProfessor(String nome) {
 			for (Professor professor : listaProfessores) {
 				if(professor.getNome().equals(nome)) {
 					return professor;
@@ -35,6 +35,18 @@ public class ProfessorService {
 			return null;
 		}
 	
+	//Método de Listagem de professores
+	public void listaProfessor() {
+		for (Professor professor : listaProfessores) {
+			professor.mostraDados();
+		}
+	}
+	//Método de Povoação da Lista de Professores
 	
+	public void povoaProfessor() {
+		addProfessor("Edson", 993571547, "320.485.487-20", "Rua 17, 300", "Mestre", "Matemática Discreta");
+		addProfessor("Francisco", 987405087, "157.545.487-10", "Rua Glicen, 20", "Pós",  "Teoria Administrativa");
+		addProfessor("Diego", 996781517, "151.577.843-18", "Rua Joao Neto, 1587", "Mestre", "Programação Orientada a Objetos");
+	}
 	
 }

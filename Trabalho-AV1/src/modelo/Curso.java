@@ -52,4 +52,12 @@ public class Curso {
 		this.gradeCurso = gradeCurso;
 	}
 	
+	//Métodos
+	public void mostraDados() {
+		System.out.println("Nome do Curso: " + this.nome);
+		System.out.println("Código do Curso: " + this.codigo);
+		System.out.println("Turno do Curso: " + this.turno);
+		System.out.println("Professor Coordenador: " + this.coordenador.getNome());
+		System.out.println("\n");
+	}
 }
