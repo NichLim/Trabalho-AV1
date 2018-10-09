@@ -33,7 +33,7 @@ public class Professor {
 	//Disciplinas
 	public List<Disciplina> listaProfessorDisciplinas = new ArrayList();
 	
-	//Construtores
+	//Parametros
 	public Professor(String nome, String cpf, String endereco, long telefone, String categoria, Disciplina disciplina) {
 		this.nome = nome;
 		this.telefone = telefone;

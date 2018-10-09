@@ -6,16 +6,20 @@ import java.util.List;
 public class Disciplina {
 	private String name;
 	private String codigo;
-	private int carga;
 	private String horario;
+	private int sala;
+	private int carga;
 	private int custoProfessor;
 	private int custoTotal;
-	private int sala;
 	
-	
-	//Disciplinas
-	public List<Aluno> listaChamada = new ArrayList();
-	
+	//Parametros
+		public Disciplina(String name, String codigo, String horario, int sala) {
+			this.name = name;
+			this.codigo = codigo;
+			this.horario = horario;
+			this.sala = sala;
+		}
+		
 	//Salas
 	public List<int[]> listaSalas = new ArrayList();
 	
@@ -87,14 +91,6 @@ public class Disciplina {
 			this.sala = sala;
 		}
 	}
-
-		
-	
-	public List<Aluno> getListaChamada() {
-		return listaChamada;
-	}
-
-	
 }
 	
 	
