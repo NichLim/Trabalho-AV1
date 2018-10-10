@@ -29,20 +29,20 @@ public class AlunoService {
 	}
 	//Update
 	
-	public void configAlunoNome(String nome, String novonome){
-		buscaAluno(nome).setNome(novonome);
+	public void configAlunoNome(Aluno aluno, String novonome){
+		aluno.setNome(novonome);
 	}
-	public void configAlunoTel(String nome, long tel){
-		buscaAluno(nome).setTelefone(tel);
+	public void configAlunoTel(Aluno aluno, long tel){
+		aluno.setTelefone(tel);
 	}
-	public void configAlunoMat(String nome, String matricula) {
-		buscaAluno(nome).setMatricula(matricula);
+	public void configAlunoMat(Aluno aluno, String matricula) {
+		aluno.setMatricula(matricula);
 	}
-	public void configAlunoCPF(String nome, String cpf){
-		buscaAluno(nome).setCpf(cpf);
+	public void configAlunoCPF(Aluno aluno, String cpf){
+		aluno.setCpf(cpf);
 	}
-	public void configAlunoEnd(String nome, String endereco) {
-		buscaAluno(nome).setEndereco(endereco);
+	public void configAlunoEnd(Aluno aluno, String endereco) {
+		aluno.setEndereco(endereco);
 	}
 
 	//Delete
