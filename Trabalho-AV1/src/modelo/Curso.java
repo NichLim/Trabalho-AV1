@@ -2,6 +2,8 @@ package modelo;
 import java.util.ArrayList;
 import java.util.List;
 
+import service.DisciplinaService;
+
 public class Curso {
 	private String nome;
 	private String codigo;
@@ -52,12 +54,27 @@ public class Curso {
 		this.gradeCurso = gradeCurso;
 	}
 	
-	//Métodos
+	//Mï¿½todos
 	public void mostraDados() {
 		System.out.println("Nome do Curso: " + this.nome);
-		System.out.println("Código do Curso: " + this.codigo);
+		System.out.println("Codigo do Curso: " + this.codigo);
 		System.out.println("Turno do Curso: " + this.turno);
 		System.out.println("Professor Coordenador: " + this.coordenador.getNome());
 		System.out.println("\n");
+	}
+	//adicionar disciplina a grade do curso
+	public void addDscGrade(String name, String codigo, String horario, int sala) {
+		Disciplina d = new Disciplina(name, codigo, horario, sala);
+		gradeCurso.add(d);
+	}
+	public void addDscGrade(Disciplina disc){
+		gradeCurso.add(disc);
+	}
+	
+	//lista o nome de todas as disciplinas da grade
+	public void listaGrade(){
+		for (Disciplina disciplina : gradeCurso) {
+			System.out.println(disciplina.getName());
+		}
 	}
 }

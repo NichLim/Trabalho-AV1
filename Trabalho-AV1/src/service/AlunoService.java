@@ -14,6 +14,9 @@ public class AlunoService {
 		Aluno a = new Aluno(nome, cpf, matricula, endereco, email, telefone, situacao, curso);
 		listaAlunos.add(a);
 	}
+	public void addAluno(Aluno a){
+		listaAlunos.add(a);
+	}
 	//Read
 	public Aluno buscaAluno(String matricula) {
 		for (Aluno aluno : listaAlunos) {
@@ -21,7 +24,7 @@ public class AlunoService {
 				return aluno;
 			}
 		}
-		System.out.println("Aluno não encontrado.");
+		System.out.println("Aluno nï¿½o encontrado.");
 		return null;
 	}
 	//Update
@@ -35,6 +38,9 @@ public class AlunoService {
 	public void configAlunoMat(String nome, String matricula) {
 		buscaAluno(nome).setMatricula(matricula);
 	}
+	public void configAlunoCPF(String nome, String cpf){
+		buscaAluno(nome).setCpf(cpf);
+	}
 	public void configAlunoEnd(String nome, String endereco) {
 		buscaAluno(nome).setEndereco(endereco);
 	}
@@ -43,7 +49,7 @@ public class AlunoService {
 	public void deletarAluno(String nome){
 		listaAlunos.remove(buscaAluno(nome));
 	}
-	//Métodos
+	//Mï¿½todos
 	public void updateSituacao(String nome) {
 		if (buscaAluno(nome).listadeDisciplinas.isEmpty() ){
 			buscaAluno(nome).setSituacao("Pendente");

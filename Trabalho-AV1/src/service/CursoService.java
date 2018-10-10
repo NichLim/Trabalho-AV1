@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import modelo.Curso;
+import modelo.Disciplina;
 import modelo.Professor;
 
 public class CursoService {
@@ -22,7 +23,7 @@ public class CursoService {
 				return curso;
 			}	
 		}
-		System.out.println("Curso não encontrado.");
+		System.out.println("Curso nao encontrado.");
 		return null;
 	}	
 	
@@ -40,15 +41,7 @@ public class CursoService {
 		listadeCursos.remove(buscaCurso(nome));
 	}
 	
-	//Métodos
-	public void povoaCurso() {
-	ProfessorService profsvc = new ProfessorService();
-	
-	}
-	public void gradeCursos() {
-		
-	}
-	
+	//Metodos
 	public void listaCursos() {
 		for (Curso curso : listadeCursos) {
 			curso.mostraDados();

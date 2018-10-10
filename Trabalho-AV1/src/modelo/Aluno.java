@@ -93,7 +93,7 @@ public class Aluno {
 		this.curso = curso;
 	}
 	
-	//Métodos
+	//Mï¿½todos
 	public List<Disciplina> getDisciplinas(){
 		return this.listadeDisciplinas;
 	}
@@ -103,7 +103,7 @@ public class Aluno {
 		System.out.println("CPF: " + this.cpf);
 		System.out.println("Matricula: " + this.matricula);
 		System.out.println("Situacao: " + this.situacao);
-		System.out.println("Endereço: " + this.endereco);
+		System.out.println("Endereco: " + this.endereco);
 		System.out.println("Email: " + this.email);
 		System.out.println("Telefone: " + this.telefone);
 		System.out.println("Curso: " + this.curso.getNome());

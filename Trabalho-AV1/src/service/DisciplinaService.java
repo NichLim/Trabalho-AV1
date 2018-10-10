@@ -23,7 +23,7 @@ public class DisciplinaService {
 	
 	public void listaChamada() {
 		for (Aluno aluno : listaChamada) {
-			aluno.mostraDados();
+			aluno.getNome();
 		}
 	}
 
