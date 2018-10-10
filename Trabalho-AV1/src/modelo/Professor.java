@@ -26,7 +26,7 @@ public class Professor {
 	private String nome;
 	private String cpf;
 	private String endereco;
-	private long telefone;
+	private int telefone;
 	private String categoria;
 	private Disciplina disciplina;
 
@@ -34,7 +34,7 @@ public class Professor {
 	public List<Disciplina> listaProfessorDisciplinas = new ArrayList();
 	
 	//Parametros
-	public Professor(String nome, String cpf, String endereco, long telefone, String categoria, Disciplina disciplina) {
+	public Professor(String nome, String cpf, String endereco, int telefone, String categoria, Disciplina disciplina) {
 		this.nome = nome;
 		this.telefone = telefone;
 		this.cpf = cpf;
@@ -72,11 +72,11 @@ public class Professor {
 		this.endereco = endereco;
 	}
 
-	public long getTelefone() {
+	public int getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(long telefone) {
+	public void setTelefone(int telefone) {
 		this.telefone = telefone;
 	}
 

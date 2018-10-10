@@ -5,6 +5,7 @@ import modelo.Curso;
 import modelo.Disciplina;
 import modelo.Professor;
 import service.AlunoService;
+import service.DisciplinaService;
 import service.CursoService;
 import service.ProfessorService;
 
@@ -14,10 +15,15 @@ public class Programa {
 		CursoService cursosvc = new CursoService();
 		AlunoService alunosvc = new AlunoService();
 		ProfessorService profsvc = new ProfessorService();
+		DisciplinaService discsvc = new DisciplinaService();
+	
 		
-		profsvc.addProfessor("Edson", 993571547, "320.485.487-20", "Rua 17, 300", null, "Matemática Discreta");
-		profsvc.addProfessor("Francisco", 987405087, "157.545.487-10", "Rua Glicen, 20", null,  "Teoria Administrativa");
-		profsvc.addProfessor("Diego", 996781517, "151.577.843-18", "Rua Joao Neto, 1587", null, "Programação Orientada a Objetos");;
+		discsvc.addDisciplina("Matemática Discreta", "MA01", "18:30 - 20:00", 100);
+		discsvc.addDisciplina("Teoria Administrativa", "AD01", "18:30 - 20:00", 101);
+		discsvc.addDisciplina("Programação Orientada a Objetos", "ST01", "20:30 - 22:00", 102);
+		profsvc.addProfessor("Edson", "320.485.487-20", "Rua 17, 300", 993571547, "Especialista", discsvc.buscaDisciplina("Matemática Discreta"));
+		profsvc.addProfessor("Francisco", "157.545.487-10", "Rua Glicen, 20", 987405087, "Doutor",  discsvc.buscaDisciplina("Teoria Administrativa"));
+		profsvc.addProfessor("Diego", "151.577.843-18", "Rua Joao Neto, 1587", 996781517, "Mestre", discsvc.buscaDisciplina("Programação Orientada a Objetos"));
 		cursosvc.addCurso("Matemática", "320", "Noite", profsvc.buscaProfessor("Edson"));
 		cursosvc.addCurso("Administração", "301", "Noite", profsvc.buscaProfessor("Francisco"));
 		cursosvc.addCurso("Ciencia de Computação", "1111", "Manhã", profsvc.buscaProfessor("Diego"));

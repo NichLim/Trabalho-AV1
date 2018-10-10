@@ -11,6 +11,7 @@ public class DisciplinaService {
 
 	//Disciplinas
 	public List<Aluno> listaChamada = new ArrayList();
+	public List<Disciplina> listaDisciplinas = new ArrayList();
 	
 	public List<Aluno> getListaChamada(){
 		return this.listaChamada;
@@ -26,4 +27,12 @@ public class DisciplinaService {
 		}
 	}
 
+	public Disciplina buscaDisciplina(String name) {
+		for (Disciplina disciplina : listaDisciplinas) {
+			if(disciplina.getName().equals(name)) {
+				return disciplina;
+			}
+		}
+		return null;
+	}
 }

@@ -18,7 +18,7 @@ public class ProfessorService {
 	
 	
 	//Receita professor - Fixed ;). (Ty brow :D)
-	public void addProfessor(String nome, long telefone, String cpf, String endereco, String categoria, Disciplina disciplina) {
+	public void addProfessor(String nome, String cpf, String endereco, int telefone, String categoria, Disciplina disciplina) {
 		Professor p = new Professor(nome, endereco, cpf, telefone, categoria, disciplina);
 		listaProfessores.add(p);
 	}
@@ -50,7 +50,7 @@ public class ProfessorService {
 		public void upProfessorNome(String nome, String novonome){
 			buscaProfessor(nome).setNome(novonome);
 		}
-		public void upProfessorTel(String nome, long tel){
+		public void upProfessorTel(String nome, int tel){
 			buscaProfessor(nome).setTelefone(tel);
 		}
 		public void upProfessorDisciplina(String nome, Disciplina disciplina) {
