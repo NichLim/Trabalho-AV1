@@ -17,7 +17,10 @@ public class Programa {
 		AlunoService alunosvc = new AlunoService();
 		ProfessorService profsvc = new ProfessorService();
 		DisciplinaService discsvc = new DisciplinaService();
-		Scanner s = new Scanner(System.in);
+		Aluno aluno = new Aluno();
+		Aluno a = new Aluno();
+		
+		Scanner teclado = new Scanner(System.in);
 	
 		
 		discsvc.addDisciplina("Matematica Discreta", "MA01", "18:30 - 20:00", 100);
@@ -59,5 +62,131 @@ public class Programa {
 		}
 		
 		}*/
+		
+		
+		
+		//Menu......
+		int ops=-1;
+		int opsaluno=-1;
+		int opsedaluno=-1;
+		int opsprofessor=-1;
+		int opsedprofessor=-1;
+
+
+		while(ops!=0){
+			System.out.println("Escolha uma opção para acessar a área desejada:");
+			System.out.println("1 - Aluno");
+			System.out.println("2 - Professor");
+			System.out.println("3 - Curso");
+			System.out.println("4 - Disciplina");
+			System.out.println("0 - Sair");
+
+
+			switch(ops){
+			case 1:
+			while(opsaluno!=0){
+				System.out.println("Digite a ação desejada:");
+				System.out.println("1 - Cadastrar aluno.");
+				System.out.println("2 - Listar todos os alunos.");
+				System.out.println("3 - Buscar aluno.");
+				System.out.println("4 - Editar aluno.");
+				System.out.println("5 - Excluir aluno.");
+				System.out.println("0 - Sair");
+				
+				switch(opsaluno) {
+				case 1:
+				System.out.println("Digite o nome:");
+				aluno.setNome(teclado.nextLine());
+				
+				System.out.println("Digite o cpf:");
+				aluno.setCpf(teclado.nextLine());
+				
+				System.out.println("Digite a matricula:");
+				aluno.setMatricula(teclado.nextLine());
+				
+				System.out.println("Digite o endereço:");
+				aluno.setEndereco(teclado.nextLine());
+				
+				System.out.println("Digite o email:");
+				aluno.setEmail(teclado.nextLine());
+				
+				System.out.println("Digite o Curso:");
+				aluno.setCurso(cursosvc.buscaCurso(teclado.nextLine()));
+				break;
+
+				case 2:
+				alunosvc.listaAlunos();
+				break;
+
+				case 3:
+				System.out.println("Digite o nome do aluno:");
+				alunosvc.buscaAluno(teclado.nextLine());
+				break;
+				
+				case 4:
+				while(opsedaluno!=0){
+					switch(opsedaluno) {
+					System.out.println("Digite o que deseja editar:");
+					System.out.println("1 - Nome.");
+					System.out.println("2 - Cpf.");
+					System.out.println("3 - Matricula.");
+					System.out.println("4 - Editar aluno.");
+					System.out.println("5 - Excluir aluno.");
+					System.out.println("0 - Sair");
+					
+					case 1:
+					System.out.println("Digite o nome atual do aluno:");
+					a = alunosvc.buscaAluno(teclado.nextLine());
+					System.out.println("Digite o novo nome do aluno");
+					alunosvc.configAlunoNome(a, teclado.nextLine());
+					break;
+					
+					case 2:
+					System.out.println("Digite o nome atual do aluno:");
+					a = alunosvc.buscaAluno(teclado.nextLine());
+					System.out.println("Digite o novo cpf do aluno;");
+					alunosvc.configAlunoCPF(a, teclado.nextLine());
+					break;
+					
+					case 3:
+					System.out.println("Digite o nome atual do aluno:");
+					a = alunosvc.buscaAluno(teclado.nextLine());
+					System.out.println("Digite a nova matricula:");
+					alunosvc.configAlunoMat(a, teclado.nextLine());
+					break;
+					
+					case 3:
+					System.out.println("Digite o endereço:");
+					alunosvc.setEndereco(a, teclado.nextLine());
+				
+					System.out.println("Digite o email:");
+					alunosvc.setEmail(a, teclado.nextLine());
+				
+					System.out.println("Digite o Curso:");
+					alunosvc.setCurso(a, cursosvc.buscaCurso(teclado.nextLine()));
+					}
+				break;
+				}
+			}
+
+				case 5:
+				System.out.println("Digite o nome do aluno");
+				alunosvc.remove(teclado.nextLine);
+				break;
+				}
+			
+
+
+
+			}
+			break;
+			
+			default:
+			
+			break;
+
+			}
+			
+		}
 	}
 }
